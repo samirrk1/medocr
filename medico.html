@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medico - Scan Medicine Info</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    header h1 {
+      color: #E6E6FA; 
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .btn-signin {
+      padding: 0.5rem 1rem;
+      background: #E6E6FA; 
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      background: #f0f0ff; 
+      flex-wrap: wrap; 
+      text-align: center; 
+    }
+
+    .hero-content {
+      max-width: 50%;
+      flex: 1 1 100%; 
+      margin-bottom: 2rem; 
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #8A2BE2; 
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button, .hero label {
+      padding: 0.75rem 1.5rem;
+      margin-right: 1rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 1rem; 
+    }
+
+    .btn-primary {
+      background-color: #E6E6FA; 
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: #f0f0f0;
+      color: #E6E6FA; 
+    }
+
+    .illustration {
+      max-width: 40%;
+      flex: 1 1 100%; 
+    }
+
+    .illustration img {
+        width: 100%;
+        height: auto; 
+        border-radius: 10px;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      background: white;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .features, .steps {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; 
+      gap: 2rem;
+    }
+
+    .feature, .step {
+      flex: 1 1 250px;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    footer {
+      background: #E6E6FA;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column; 
+        padding: 1rem;
+      }
+
+      header h1 {
+        margin-bottom: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column; 
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .btn-signin {
+        width: 100%; 
+        text-align: center;
+      }
+
+      .hero {
+        flex-direction: column; 
+        padding: 2rem 1rem;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.8rem; 
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .illustration {
+        max-width: 100%;
+      }
+
+      .hero button, .hero label {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+
+      .section {
+        padding: 2rem 1rem;
+      }
+
+      .section h3 {
+        font-size: 1.5rem;
+      }
+
+      .features, .steps {
+        flex-direction: column; 
+        gap: 1.5rem;
+      }
+
+      .feature, .step {
+        flex: 1 1 100%; 
+      }
+    }
+
+    
+    @media (max-width: 480px) {
+      header {
+        padding: 0.75rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .hero button, .hero label {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      .section h3 {
+        font-size: 1.3rem;
+      }
+
+      .feature h4, .step h4 {
+        font-size: 1.1rem;
+      }
+
+      .feature p, .step p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Medico</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#signin" class="btn-signin">Sign In</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Scan Any Medicine. Know What You're Taking.</h2>
+      <p>Instant details on dosage, usage, side effects, and more – just from a photo.</p>
+      <form id="upload-form">
+        <input type="file" id="file-input" accept="image/*" style="display: none;" />
+        <label for="file-input" class="btn-primary" style="cursor: pointer;">Upload Medicine Image</label>
+        <button type="button" class="btn-secondary">Try Live Scan</button>
+        <div id="preview" style="margin-top: 1rem;"></div>
+      </form>
+    </div>
+    <div class="illustration">
+      <img src="https://via.placeholder.com/400x300" alt="Scanning Illustration" />
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <h3>How It Works</h3>
+    <div class="steps">
+      <div class="step">
+        <h4>📷 Snap a Photo</h4>
+        <p>Take or upload a clear image of the medicine packet.</p>
+      </div>
+      <div class="step">
+        <h4>🧠 AI Recognizes</h4>
+        <p>Our system reads the text and identifies the medicine.</p>
+      </div>
+      <div class="step">
+        <h4>📄 Instant Info</h4>
+        <p>View verified details on usage, dosage, and side effects.</p>
+      </div>
+      <div class="step">
+        <h4>💾 Save or Share</h4>
+        <p>Save results or share with your doctor or family.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Why Use Medico?</h3>
+    <div class="features">
+      <div class="feature">
+        <h4>AI-Powered Recognition</h4>
+        <p>Fast and accurate scanning of medicine names.</p>
+      </div>
+      <div class="feature">
+        <h4>Verified Information</h4>
+        <p>Trusted and reliable drug data from certified databases.</p>
+      </div>
+      <div class="feature">
+        <h4>Interaction Alerts</h4>
+        <p>Detect potential conflicts with your other medications.</p>
+      </div>
+      <div class="feature">
+        <h4>Private & Secure</h4>
+        <p>Your data is encrypted and never shared without permission.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Medico. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const fileInput = document.getElementById('file-input');
+    const preview = document.getElementById('preview');
+
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.innerHTML = `<img src="${e.target.result}" alt="Preview" style="max-width: 100%; border-radius: 10px; margin-top: 1rem;" />`;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        preview.innerHTML = "<p style='color: red;'>Please upload a valid image.</p>";
+      }
+    });
+  </script>
+</body>
+
+</html>
